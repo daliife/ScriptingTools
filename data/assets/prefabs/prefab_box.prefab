@@ -1,0 +1,1 @@
+{"prefab":"prefab_box","entities":[{"name":"prefab_box","transform":{"translation":[0.0,0.0,0.0],"rotation":[-90.0,0.0,0.0],"scale":[1.0,1.0,1.0]},"render":{"mesh":"data/assets/meshes/prefab_box.mesh","materials":["data/assets/materials/mtl_crate.mtl"]},"tags":["default"]}]}

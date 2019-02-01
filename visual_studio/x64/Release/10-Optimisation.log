@@ -1,0 +1,18 @@
+﻿  ConsoleModule.cpp
+c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(265): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(266): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(267): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(278): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(279): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(280): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(287): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(303): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(304): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(306): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Generating code
+  1 of 5104 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  10-Optimisation.vcxproj -> C:\Users\GAME\Documents\PROJECTS\ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe

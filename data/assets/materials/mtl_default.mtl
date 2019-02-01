@@ -1,0 +1,6 @@
+{
+	"tech": "pbr.tech",
+	"textures": {
+		"diffuse": "data/assets/textures/block_teal.tga"
+	}
+}

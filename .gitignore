@@ -26,3 +26,6 @@
 *.exe
 *.out
 *.app
+
+# .vs folder
+visual_studio/.vs/

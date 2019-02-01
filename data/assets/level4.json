@@ -1,0 +1,148 @@
+{
+  "scene": "test 1",
+  "directory": "data/assets/",
+  "geometries": [
+    {
+      "name": "plane_10x20",
+      "file": "plane_10x20.obj"
+    },
+    {
+      "name": "plane_40x40",
+      "file": "plane_40x40.obj"
+    },
+    {
+      "name": "crate",
+      "file": "crate_1x1x1.obj"
+    }
+  ],
+  "textures": [
+    {"name": "blue", "file": "block_blue.tga"},
+    {"name": "purple", "file": "block_purple.tga"},
+    {"name": "teal", "file": "block_teal.tga"}
+  ],
+  "shaders": [
+    {"name": "phong", "vertex": "data/shaders/phong.vert", "fragment": "data/shaders/phong.frag"},
+    {"name": "texture", "vertex": "data/shaders/phong.vert", "fragment": "data/shaders/texture.frag"}
+  ],
+  "materials": [
+    {"name": "blue", "shader": "phong", "diffuse_texture":"blue"},
+    {"name": "purple", "shader": "phong", "diffuse_texture":"purple"},
+    {"name": "purpletex", "shader": "texture", "diffuse_texture":"purple"},
+    {"name": "teal", "shader": "phong", "diffuse_texture":"teal"}
+  ],
+  "lights": [
+    {
+      "name": "Light 1",
+      "position": [-100,100,50],
+      "color": [1,1,1]
+    }
+  ],
+  "entities": [
+    {
+      "name": "crate",
+      "geometry": "crate",
+      "material": "purple",
+      "transform": {
+        "translate": [ 0, 1.2, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 0.6, 0.6, 0.6 ]
+      }
+    },
+    {
+      "name": "crate2",
+      "geometry": "crate",
+      "material": "purple",
+      "transform": {
+        "translate": [ 0, 2.4, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 0.6, 0.6, 0.6 ]
+      }
+    },
+    {
+      "name": "crate3",
+      "geometry": "crate",
+      "material": "purpletex",
+      "transform": {
+        "translate": [ 0, 3.6, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 0.6, 0.6, 0.6 ]
+      }
+    },
+    {
+      "name": "floor_1",
+      "geometry": "plane_40x40",
+      "material": "blue",
+      "transform": {
+        "translate": [ 0, 0, 0 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 20, 0.5, 20 ]
+      }
+    },
+    {
+      "name": "floor_2",
+      "geometry": "plane_40x40",
+      "material": "teal",
+      "transform": {
+        "translate": [ 0, 10.066, 56.898 ],
+        "rotate": [ 0, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 20, 0.5, 20 ]
+      }
+    },
+    {
+      "name": "ramp_1",
+      "geometry": "plane_10x20",
+      "material": "purple",
+      "transform": {
+        "translate": [ 15, 5, 28.529 ],
+        "rotate": [ -30.837, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 5, 0.5, 10 ]
+      }
+    },
+    {
+      "name": "ramp_2",
+      "geometry": "plane_10x20",
+      "material": "purple",
+      "transform": {
+        "translate": [ -15, 5, 28.529 ],
+        "rotate": [ -30.837, 0, 0 ],
+        "scale": [ 1, 1, 1 ]
+      },
+      "collider": {
+        "type": "Box",
+        "center": [ 0, 0, 0 ],
+        "halfwidth": [ 5, 0.5, 10 ]
+      }
+    }
+
+  ]
+}

@@ -1,0 +1,2 @@
+{"scene":"test123","entities":[{"name":"Teapot001","transform":{"translation":[-54.498,-5.36607,1.87592],"rotation":[0.0,0.0,0.0],"scale":[1.0,1.0,1.0]},"render":{"mesh":"data/assets/meshes/Teapot001.mesh","materials":["data/assets/materials/mtl_default.mtl"]},"rotator":{"speed":"3","axis":[0.0,1.0,0.0]},"tags":["All","Test
+"]}]}

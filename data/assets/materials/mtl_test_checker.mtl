@@ -1,0 +1,8 @@
+{
+	"tech": "pbr.tech",
+	"shadows": 1,
+	"textures": {
+		"diffuse": "data/assets/textures/JP_Brick01_Bump.jpg",
+		"normal": "data/assets/textures/null_normal.dds"
+	}
+}

@@ -1,0 +1,1 @@
+{"prefab":"axe","entities":[{"name":"axe","transform":{"translation":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0],"scale":[1.0,1.0,1.0]},"render":{"mesh":"data/assets/meshes/axe.mesh","materials":["data/assets/materials/mtl_axe.mtl"]},"rotator":{"speed":2.0,"axis":[0.0,1.0,0.0]},"tags":["default"]}]}
