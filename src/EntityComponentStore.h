@@ -2,6 +2,7 @@
 #include "Components.h"
 #include "components/comp_rotator.h"
 #include "components/comp_tag.h"
+#include "components/comp_movingplatform.h"
 #include <vector>
 #include <unordered_map>
 #include <map>
@@ -34,6 +35,10 @@ struct EntityComponentStore {
 		return -1;
 	}
 
+	void toggleEntity(int entity_id) {
+		getComponentFromEntity<Mesh>(entity_id).active = !getComponentFromEntity<Mesh>(entity_id).active;
+	}
+
     //returns id of entity
     void update(float dt) {
 
@@ -42,11 +47,13 @@ struct EntityComponentStore {
         auto& colliders = getAllComponents<Collider>();
         auto& rotators = getAllComponents<Rotator>();
         auto& tags = getAllComponents<Tag>();
+		auto& movables = getAllComponents<MovingPlatform>();
 
         for (auto& light : lights) light.update(dt);
         for (auto& col : colliders) col.update(dt);
         for (auto& rot : rotators) rot.update(dt);
         for (auto& tag : tags) tag.update(dt);
+		for (auto& movable : movables) movable.update(dt);
     }
 
     void render() {
@@ -56,11 +63,13 @@ struct EntityComponentStore {
         auto& colliders = getAllComponents<Collider>();
         auto& rotators = getAllComponents<Rotator>();
         auto& tags = getAllComponents<Tag>();
+		auto& movables = getAllComponents<MovingPlatform>();
 
         for (auto& light : lights) light.render();
         for (auto& col : colliders) col.render();
         for (auto& rot : rotators) rot.render();
         for (auto& tag : tags) tag.render();
+		for (auto& movable : movables) movable.render();
     }
 
     void renderEntity(int entity_id)
@@ -71,6 +80,7 @@ struct EntityComponentStore {
         debugRender<Collider>(entity_id);
         debugRender<Rotator>(entity_id);
         debugRender<Tag>(entity_id);
+		debugRender<MovingPlatform>(entity_id);
     }
 
     template<std::size_t I = 0, typename... Tp>

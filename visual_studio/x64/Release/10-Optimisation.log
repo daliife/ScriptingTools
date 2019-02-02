@@ -1,18 +1,49 @@
-﻿  ConsoleModule.cpp
+﻿  CollisionSystem.cpp
+  Components.cpp
 c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(265): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(266): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(267): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(278): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(279): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(280): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\components.cpp(151): warning C4312: 'type cast': conversion from 'int' to 'ImTextureID' of greater size
+  ControlSystem.cpp
+  DebugSystem.cpp
+c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GUISystem.cpp
+  Game.cpp
+c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GraphicsSystem.cpp
+  Parsers.cpp
+c:\users\game\documents\projects\scriptingtools\src\parsers.cpp(156): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+  comp_movingplatform.cpp
+  comp_rotator.cpp
+  comp_tag.cpp
+  main.cpp
+c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  ConsoleModule.cpp
+c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(272): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(273): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(274): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(285): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(286): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(287): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(303): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(304): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'float', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(306): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(294): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(310): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(311): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\consolemodule.cpp(313): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  EditorSystem.cpp
+c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\editorgraphmodule.h(21): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\program files (x86)\windows kits\10\include\10.0.17134.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  c:\users\game\documents\projects\scriptingtools\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
+c:\users\game\documents\projects\scriptingtools\src\tools\editorutils.h(10): warning C4099: 'NodeFile': type name first seen using 'class' now seen using 'struct'
+  c:\users\game\documents\projects\scriptingtools\src\tools\editorsystem.h(15): note: see declaration of 'NodeFile'
+c:\users\game\documents\projects\scriptingtools\src\tools\editorutils.h(13): warning C4099: 'NodeFile': type name first seen using 'class' now seen using 'struct'
+  c:\users\game\documents\projects\scriptingtools\src\tools\editorutils.h(13): note: see declaration of 'NodeFile'
+c:\users\game\documents\projects\scriptingtools\src\tools\editorsystem.cpp(85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\game\documents\projects\scriptingtools\src\tools\editorsystem.cpp(187): warning C4312: 'type cast': conversion from 'GLuint' to 'void *' of greater size
   Generating code
-  1 of 5104 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+  205 of 5182 functions ( 4.0%) were compiled, the rest were copied from previous compilation.
+    3 functions were new in current compilation
+    199 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   10-Optimisation.vcxproj -> C:\Users\GAME\Documents\PROJECTS\ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe

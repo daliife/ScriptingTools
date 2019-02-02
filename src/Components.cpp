@@ -153,6 +153,30 @@ void Mesh::debugRender() {
 			ImGui::SetCursorPos({ ImGui::GetCursorPos().x, ImGui::GetCursorPos().y + (64 - ImGui::GetFont()->FontSize) / 2 });
 			ImGui::Text(" Albedo Material");
 
+			float ambient[3] = { mat.ambient.x, mat.ambient.y, mat.ambient.z };
+			if (ImGui::DragFloat3("Ambient", ambient)) {
+				mat.ambient.x = ambient[0];
+				mat.ambient.y = ambient[1];
+				mat.ambient.z = ambient[2];
+			}
+
+			float specular[3] = { mat.specular.x, mat.specular.y, mat.specular.z };
+			if (ImGui::DragFloat3("Specular", specular)) {
+				mat.specular.x = specular[0];
+				mat.specular.y = specular[1];
+				mat.specular.z = specular[2];
+			}
+
+			float diffuse[3] = { mat.diffuse.x, mat.diffuse.y, mat.diffuse.z };
+			if (ImGui::DragFloat3("Diffuse", diffuse)) {
+				mat.diffuse.x = diffuse[0];
+				mat.diffuse.y = diffuse[1];
+				mat.diffuse.z = diffuse[2];
+			}
+
+			ImGui::DragFloat("Specular Gloss", &mat.specular_gloss);
+
+
 			// TO-DO Debug material
             // Add backface culling properties
 			ImGui::AddSpace(0, 10);
@@ -317,6 +341,7 @@ void Entity::Save(rapidjson::Document& json, rapidjson::Value & entity) {
     auto& collider = ECS.getSafeComponentFromEntity<Collider>(name);
     auto& rotator = ECS.getSafeComponentFromEntity<Rotator>(name);
     auto& tag = ECS.getSafeComponentFromEntity<Tag>(name);
+	auto& movable = ECS.getSafeComponentFromEntity<MovingPlatform>(name);
 
     if (transform.index != 0) transform.Save(json, entity);
     if (mesh.index != 0) mesh.Save(json, entity);

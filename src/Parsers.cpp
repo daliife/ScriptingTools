@@ -5,6 +5,7 @@
 #include "rapidjson/istreamwrapper.h"
 #include "components/comp_rotator.h"
 #include "components/comp_tag.h"
+#include "components/comp_movingplatform.h"
 #include <unordered_map>
 
 std::unordered_map<std::string, int> Parsers::geometries;
@@ -669,6 +670,12 @@ int Parsers::parseEntity(rapidjson::Value & entity, GraphicsSystem & graphics_sy
         Tag& tag = ECS.createComponentForEntity<Tag>(ent_id);
         tag.Load(entity, ent_id);
     }
+
+	if (entity.HasMember("movingplatform")) {
+
+		MovingPlatform& movable = ECS.createComponentForEntity<MovingPlatform>(ent_id);
+		movable.Load(entity, ent_id);
+	}
 
     ///TODO- Add any other component loading here!
 

@@ -191,6 +191,8 @@ void GraphicsSystem::setMaterialUniforms() {
 //renders a given mesh component
 void GraphicsSystem::renderMeshComponent_(Mesh& comp) {
     
+	if (!comp.active) return;
+
     //get transform of components entity
     Transform& transform = ECS.getComponentFromEntity<Transform>(comp.owner);
 	//get camera

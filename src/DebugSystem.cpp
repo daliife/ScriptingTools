@@ -50,6 +50,10 @@ void DebugSystem::setActive(bool a) {
 	draw_colliders_ = a;
 }
 
+bool DebugSystem::isActive() {
+	return draw_grid_;
+}
+
 //called once per frame
 void DebugSystem::update(float dt) {
 

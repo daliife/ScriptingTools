@@ -223,8 +223,17 @@ void EditorSystem::UpdateInspector(float dt)
 
 			ImGui::AddSpace(0, 10);
 
-			if (ImGui::Button("Delete Entity")) {
-				DeleteEntityScene(entity_id);
+			if (ECS.getComponentFromEntity<Mesh>(entity_id).active) {
+				if (ImGui::Button("Hide Entity")) {
+					std::cout << "Entity Hidden: " << std::to_string(entity_id) << std::endl;
+					ECS.toggleEntity(entity_id);
+				}
+			}
+			else {
+				if (ImGui::Button("Show Entity")) {
+					std::cout << "Entity Shown: " << std::to_string(entity_id) << std::endl;
+					ECS.toggleEntity(entity_id);
+				}
 			}
         }
     }
@@ -236,11 +245,15 @@ void EditorSystem::UpdateInspector(float dt)
 void EditorSystem::RenderNode(TransformNode& trans) {
 
 	auto& ent = ECS.entities[trans.entity_owner];
+	string temp = ent.name;
+	if (!ECS.getComponentFromEntity<Mesh>(trans.entity_owner).active) {
+		temp += " (hidden)";
+	}
 
     //ImGui::Unindent(10);
     if (trans.children.size() > 0) {
         ImGui::Unindent(7);
-        if (ImGui::TreeNode(ent.name.c_str())) {
+        if (ImGui::TreeNode(temp.c_str())) {
 
             if (ImGui::IsItemClicked())
             {
@@ -255,7 +268,7 @@ void EditorSystem::RenderNode(TransformNode& trans) {
         ImGui::Indent(7);
     }
     else {
-        if (ImGui::Selectable(ent.name.c_str()))
+        if (ImGui::Selectable(temp.c_str()))
         {
             selected = ent.name;
         }
@@ -478,7 +491,7 @@ void EditorSystem::UpdateComponentMenu(float dt)
 			ImGui::AddSpace(0, 10);
 
 			//DROPDOWN LIST
-			const char* items[] = { "Transform", "Light", "Collider", "Rotator", "Tag", "MovablePlatform"};
+			const char* items[] = { "Rotator", "Tag", "MovablePlatform"};
 			static const char* current_item = items[0];
 			static int id_item;
 			if (ImGui::BeginCombo("##combo", current_item)) // The second parameter is the label previewed before opening the combo.
@@ -500,7 +513,8 @@ void EditorSystem::UpdateComponentMenu(float dt)
 			ImGui::AddSpace(0, 10);
 			if (ImGui::Button("Add")) {
 				is_adding_component = false;
-				AddComponentSelected(id_item);
+				int entity_id = ECS.getEntity(selected);
+				AddComponentSelected(id_item, entity_id);
 			}
 
 		}
@@ -510,21 +524,20 @@ void EditorSystem::UpdateComponentMenu(float dt)
 }
 
 // Adds the given component to the object selected.
-void EditorSystem::AddComponentSelected(int id)
+void EditorSystem::AddComponentSelected(int id, int entity_id)
 {
 	// TO-DO
 	std::cout << "Component added: " << std::to_string(id) << std::endl;
 	switch (id) {
 		case 0:
+			ECS.createComponentForEntity<Rotator>(entity_id);
+			break;
+		case 1:
+			ECS.createComponentForEntity<Tag>(entity_id);
+			break;
+		case 2:
+			ECS.createComponentForEntity<MovingPlatform>(entity_id);
 			break;
 	}
 
 }
-
-void EditorSystem::DeleteEntityScene(int entity_id) {
-
-	std::cout << "Entity Deleted: " << std::to_string(entity_id) << std::endl;
-	//ECS.entities.erase(ECS.entities.begin() + (entity_id - 1));
-
-}
-

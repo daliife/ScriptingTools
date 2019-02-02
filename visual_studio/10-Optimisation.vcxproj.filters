@@ -49,6 +49,9 @@
     <ClCompile Include="..\src\components\comp_tag.cpp">
       <Filter>components</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\components\comp_movingplatform.cpp">
+      <Filter>components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\CollisionSystem.h" />
@@ -112,6 +115,9 @@
       <Filter>components</Filter>
     </ClInclude>
     <ClInclude Include="..\src\components\comp_tag.h">
+      <Filter>components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\components\comp_movingplatform.h">
       <Filter>components</Filter>
     </ClInclude>
   </ItemGroup>

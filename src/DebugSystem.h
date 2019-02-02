@@ -10,6 +10,7 @@ public:
 	void update(float dt);
 
 	void setActive(bool a);
+	bool isActive();
 
 	//public imGUI functions
     bool isRenderActive() { return render_active; };

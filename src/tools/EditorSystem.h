@@ -71,7 +71,7 @@ private:
     void UpdateFPS(float dt);
     
     void UpdateComponentMenu(float dt);
-    void AddComponentSelected(int id);
+    void AddComponentSelected(int id, int entity_id);
 	void DeleteEntityScene(int entity_id);
     void SaveSceneToFile(const std::string & scene_name);
 

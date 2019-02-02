@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="..\src\CollisionSystem.cpp" />
     <ClCompile Include="..\src\Components.cpp" />
+    <ClCompile Include="..\src\components\comp_movingplatform.cpp" />
     <ClCompile Include="..\src\components\comp_rotator.cpp" />
     <ClCompile Include="..\src\components\comp_tag.cpp" />
     <ClCompile Include="..\src\DebugSystem.cpp" />
@@ -47,6 +48,7 @@
   <ItemGroup>
     <ClInclude Include="..\src\CollisionSystem.h" />
     <ClInclude Include="..\src\Components.h" />
+    <ClInclude Include="..\src\components\comp_movingplatform.h" />
     <ClInclude Include="..\src\components\comp_rotator.h" />
     <ClInclude Include="..\src\components\comp_tag.h" />
     <ClInclude Include="..\src\DebugSystem.h" />

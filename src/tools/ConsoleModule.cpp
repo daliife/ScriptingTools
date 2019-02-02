@@ -125,6 +125,13 @@ void ConsoleModule::update(float dt)
         if (ImGui::SmallButton("Clear")) { ConsoleClear(); } ImGui::SameLine();
         copy_clipboard_ = ImGui::SmallButton("Copy"); ImGui::SameLine();
         if (ImGui::SmallButton("Scroll to bottom")) scrollbottom_ = true;
+		ImGui::SameLine();
+		if (Game::get().game_instance->getDebugSystem().isActive()) {
+			if (ImGui::SmallButton("Deactivate debug")) Game::get().game_instance->getDebugSystem().setActive(false);
+		}
+		else {
+			if (ImGui::SmallButton("Activate debug")) Game::get().game_instance->getDebugSystem().setActive(true);
+		}
     }
 
     // Filters
