@@ -61,6 +61,10 @@ void ConsoleModule::init()
     commands_.push_back("/history");
     commands_.push_back("/clear");
     commands_.push_back("/classify");
+	commands_.push_back("moveplayer");
+	commands_.push_back("colorbackground");
+	commands_.push_back("debug");
+	commands_.push_back("changecamera");
     ConsoleWrite(true, "Console Initialized!");
 }
 
@@ -127,10 +131,16 @@ void ConsoleModule::update(float dt)
         if (ImGui::SmallButton("Scroll to bottom")) scrollbottom_ = true;
 		ImGui::SameLine();
 		if (Game::get().game_instance->getDebugSystem().isActive()) {
-			if (ImGui::SmallButton("Deactivate debug")) Game::get().game_instance->getDebugSystem().setActive(false);
+			if (ImGui::SmallButton("Deactivate debug")) {
+				Game::get().game_instance->getDebugSystem().setActive(false);
+				ConsoleWrite(false, "Debug Off");
+			}
 		}
 		else {
-			if (ImGui::SmallButton("Activate debug")) Game::get().game_instance->getDebugSystem().setActive(true);
+			if (ImGui::SmallButton("Activate debug")) {
+				Game::get().game_instance->getDebugSystem().setActive(true);
+				ConsoleWrite(false, "Debug On");
+			}
 		}
     }
 
@@ -242,11 +252,8 @@ void ConsoleModule::ExecCommand(const char* command_line)
         for (int i = first > 0 ? first : 0; i < history_.Size; i++)
             ConsoleWrite(false, "%3d: %s\n", i, history_[i]);
     }
-    else
-    {
-        // Here, work with script functions
-        // TO-DO
-
+    else 
+	{
         BuildCommand(command_line);
     }
 }
@@ -255,7 +262,6 @@ void ConsoleModule::ExecCommand(const char* command_line)
 // Link these commands to the script system.
 // https://nwnlexicon.com/index.php?title=Category:Beginning_Scripting
 // https://scripts.zeroy.com/
-
 void ConsoleModule::BuildCommand(const char* cmd)
 {
     // Getting the command and splitting the string by blankspace
@@ -265,8 +271,6 @@ void ConsoleModule::BuildCommand(const char* cmd)
 
 	bool com_found = false;
 
-    // Excute the given command.
-    // TO-DO, ADD MORE COMMANDS HERE.
     if (input.find("moveplayer") != std::string::npos)
     {
         float posx = atof(v[1].c_str());
@@ -280,7 +284,7 @@ void ConsoleModule::BuildCommand(const char* cmd)
 		com_found = true;
     }
 	
-	if (input.find("changebackground") != std::string::npos)
+	if (input.find("colorbackground") != std::string::npos)
 	{
 		float r = atof(v[1].c_str());
 		float g = atof(v[2].c_str());
@@ -289,16 +293,15 @@ void ConsoleModule::BuildCommand(const char* cmd)
 		com_found = true;
 	}
 
-	if (input.find("toggledebug") != std::string::npos)
+	if (input.find("debug") != std::string::npos)
 	{
 		float state = atof(v[1].c_str());
 		if (state == 1) {
 			Game::get().game_instance->getDebugSystem().setActive(true);
-		}
-		else if(state == 0){
+		} else if(state == 0) {
 			Game::get().game_instance->getDebugSystem().setActive(false);
 		}else {
-			ConsoleWrite(false, "Invalid Parameter: can only be 0 (off) or 1(on).");
+			ConsoleWrite(false, "Invalid Parameter: can only be 0(off) or 1(on).");
 		}
 		com_found = true;
 	}
@@ -317,11 +320,10 @@ void ConsoleModule::BuildCommand(const char* cmd)
 		com_found = true;
 	}
 
-	if (com_found) {
-		//ConsoleWrite(false, "Executed command: '%s'\n", cmd);
-	} else {
+	if (!com_found) {
         ConsoleWrite(false, "Unknown command: '%s'\n", cmd);
     }
+
 }
 
 // Callbacks from the console input to save information.

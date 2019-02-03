@@ -125,79 +125,59 @@ void Mesh::Load(rapidjson::Value & entity, int ent_id) {
  
 }
 // Debug render
-// Implement more parameters
-// TO-DO
 void Mesh::debugRender() {
 
     ImGui::AddSpace(0, 5);
 
     if (ImGui::TreeNode("Renderer")) {
-        ImGui::AddSpace(0, 5);
+        ImGui::AddSpace(0, 10);
         ImGui::Text("Mesh:");
         ImGui::SameLine();
         std::string mesh_name = Game::get().getGraphicsSystem().geometries_[geometry].name;
         ImGui::Text(mesh_name.c_str());
+		ImGui::AddSpace(0, 10);
 
         ImGui::Unindent(8);
         if (ImGui::TreeNode("Material" )) {
         
-            Material & mat = Game::get().getGraphicsSystem().getMaterial(material);
-            std::string material_name = mat.name;
+			Material & mat = Game::get().getGraphicsSystem().getMaterial(material);
+			std::string material_name = mat.name;
+			float ambient[3] = { mat.ambient.x, mat.ambient.y, mat.ambient.z };
+			float specular[3] = { mat.specular.x, mat.specular.y, mat.specular.z };
+			float diffuse[3] = { mat.diffuse.x, mat.diffuse.y, mat.diffuse.z };
 
 			ImGui::AddSpace(0, 10);
-			ImGui::Text("File:");
-			ImGui::SameLine();
-			ImGui::Text(material_name.c_str());
-			ImGui::Image((ImTextureID)(mat.diffuse_map), ImVec2(64, 64));
-			ImGui::SameLine();
-			ImGui::SetCursorPos({ ImGui::GetCursorPos().x, ImGui::GetCursorPos().y + (64 - ImGui::GetFont()->FontSize) / 2 });
-			ImGui::Text(" Albedo Material");
-
-			float ambient[3] = { mat.ambient.x, mat.ambient.y, mat.ambient.z };
 			if (ImGui::DragFloat3("Ambient", ambient)) {
 				mat.ambient.x = ambient[0];
 				mat.ambient.y = ambient[1];
 				mat.ambient.z = ambient[2];
 			}
-
-			float specular[3] = { mat.specular.x, mat.specular.y, mat.specular.z };
+			ImGui::AddSpace(0, 10);
 			if (ImGui::DragFloat3("Specular", specular)) {
 				mat.specular.x = specular[0];
 				mat.specular.y = specular[1];
 				mat.specular.z = specular[2];
 			}
-
-			float diffuse[3] = { mat.diffuse.x, mat.diffuse.y, mat.diffuse.z };
+			ImGui::AddSpace(0, 10);
 			if (ImGui::DragFloat3("Diffuse", diffuse)) {
 				mat.diffuse.x = diffuse[0];
 				mat.diffuse.y = diffuse[1];
 				mat.diffuse.z = diffuse[2];
 			}
-
+			ImGui::AddSpace(0, 10);
 			ImGui::DragFloat("Specular Gloss", &mat.specular_gloss);
-
-
-			// TO-DO Debug material
-            // Add backface culling properties
 			ImGui::AddSpace(0, 10);
-			ImGui::Text("Backface Culling");
-			ImGui::Text("fjsdhkfhksjfhjks");
-			ImGui::Text("fjsdhkfhksjfhjks");
-			ImGui::Text("fjsdhkfhksjfhjks");
-
-			// Add more textures
-			// Add tiling
+			ImGui::Text("File:");
+			ImGui::SameLine();
+			ImGui::Text(material_name.c_str());
 			ImGui::AddSpace(0, 10);
-			ImGui::Text("Tiling");
-			lm::vec3 pos(0.0f,0.0f,0.0f);
-			float pos_array[3] = { pos.x, pos.y, pos.z };
-			if (ImGui::DragFloat3("Value", pos_array)) {
-				pos = lm::vec3(pos_array[0], pos_array[1], pos_array[2]);
-			}
-
-			ImGui::AddSpace(0, 10);
+			ImGui::Image((ImTextureID)(mat.diffuse_map), ImVec2(64, 64));
+			ImGui::SameLine();
+			ImGui::SetCursorPos({ ImGui::GetCursorPos().x, ImGui::GetCursorPos().y + (64 - ImGui::GetFont()->FontSize) / 2 });
+			ImGui::Text(" Albedo Material");
 
             ImGui::TreePop();
+
         }
 
         ImGui::TreePop();

@@ -3,7 +3,6 @@
 #include "../EntityComponentStore.h"
 #include "../extern.h"
 
-// Method to save this component into json file
 void MovingPlatform::Save(rapidjson::Document & json, rapidjson::Value & entity)
 {
 	rapidjson::Value obj(rapidjson::kObjectType);
@@ -22,7 +21,6 @@ void MovingPlatform::Save(rapidjson::Document & json, rapidjson::Value & entity)
 
 }
 
-// Load the tag
 void MovingPlatform::Load(rapidjson::Value & entity, int ent_id) {
 
 	{
@@ -46,7 +44,6 @@ void MovingPlatform::update(float dt) {
 
 }
 
-// Render debug the tag.
 void MovingPlatform::debugRender() {
 
     ImGui::AddSpace(0, 5);
