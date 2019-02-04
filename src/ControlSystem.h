@@ -32,6 +32,7 @@ public:
 	//public functions to get key and mouse
 	bool GetKey(int code) { return input[code]; }
 	bool GetButton(int code) { return input[code]; }
+	
 	//mouse is public, it's just four ints
 	Mouse mouse;
 
@@ -48,6 +49,9 @@ public:
 	float FPS_gravity = 9.8f;
 	float FPS_height = 2.0f;
 	float FPS_runspeed = 2.0f;
+
+	void setJumpSpeed(float new_value) { FPS_jump_initial_force = new_value; }
+	void setRunSpeed(float new_value) { FPS_runspeed = new_value; }
 
 private:
 	float move_speed_ = 7.5f;

@@ -29,8 +29,7 @@ void ControlSystem::update(float dt) {
 	//TODO FIND BETTER WAY TO CHANGE CONTROL TYPE IN CONSOLE MODULE
 	if (ECS.main_camera == 0) {
 		control_type = ControlTypeFree;
-	}
-	else {
+	} else {
 		control_type = ControlTypeFPS;
 	}
 
@@ -50,8 +49,6 @@ void ControlSystem::update(float dt) {
 		ECS.main_camera = 1;
 		control_type = ControlTypeFPS;
 	}
-
-
 
 }
 
@@ -97,6 +94,7 @@ void ControlSystem::updateFree(float dt) {
 }
 
 void ControlSystem::updateFPS(float dt) {
+	
 	Camera& camera = ECS.getComponentInArray<Camera>(ECS.main_camera);
 	Transform& transform = ECS.getComponentFromEntity<Transform>(camera.owner);
 

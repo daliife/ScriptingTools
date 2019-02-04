@@ -1,9 +1,8 @@
-﻿  Components.cpp
+﻿  Game.cpp
 c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\game\documents\projects\scriptingtools\src\components.cpp(174): warning C4312: 'type cast': conversion from 'int' to 'ImTextureID' of greater size
   Generating code
-  0 of 5182 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+  1 of 5182 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    3 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   10-Optimisation.vcxproj -> C:\Users\GAME\Documents\PROJECTS\ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe

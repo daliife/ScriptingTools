@@ -13,7 +13,6 @@
 Game* Game::game_instance = nullptr;
 
 Game::Game() {
-
     assert(game_instance == nullptr);
     game_instance = this;
 }
@@ -34,7 +33,8 @@ void Game::init(int window_width, int window_height) {
     
 	//this is a simple level parser which reads a json file and loads it into the engine
     //Parsers::parseJSONLevel("data/assets/level4.json", graphics_system_);
-    Parsers::parseScene("data/assets/scenes/scene_whitebox2.scene", graphics_system_);
+    //Parsers::parseScene("data/assets/scenes/scene_whitebox2.scene", graphics_system_);
+	Parsers::parseScene("data/assets/scenes/custom_level.scene", graphics_system_);
 
 	//'o' = 'free look'; 'p' = fps 
 	createFree_((float)window_width_ / (float)window_height_, control_system_);
