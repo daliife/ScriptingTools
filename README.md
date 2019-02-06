@@ -1,5 +1,7 @@
 # Scripting Tools
 
+**WARNING: The project crashes when compiling on *Debug Mode* when we try to open the Hierarchy window. On *Release Mode* everything works just fine.**
+
 ## Description
 Final project for the subject *Tool Scripting* of the La Salle [MVD](https://www.salleurl.edu/es/estudios/master-en-desarrollo-avanzado-de-videojuegos). The project includes the customization of the debug system and gui interface, the proper exportation from 3Ds Max file to json and other improvements.
 
