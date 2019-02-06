@@ -80,6 +80,23 @@ component_rotator = attributes component_rotator
 	)
 )
 
+component_moving = attributes component_moving
+(
+	parameters cmp_moving rollout:cmp_moving
+	(
+		r_speed type: #string ui:r_speed default:"1"
+		r_time type: #string ui:r_time default:"1"
+		r_dir type: #integer ui:r_dir default:1
+	)
+	
+	rollout cmp_moving "Component Moving" width:162 height:174
+	(
+		edittext 'r_speed' "Speed" width:130 height:20 align:#center
+		edittext 'r_time' "Time" width:130 height:20 align:#center
+		dropdownlist 'r_dir' "Direction" items:#("X", "Y", "Z")
+	)
+)
+
 component_neon = attributes component_neon
 (
 	parameters cmp_neon rollout:cmp_neon
@@ -188,6 +205,7 @@ function getByType type = (
 	if type == "audio" then ( return component_audio )
 	if type == "particles" then ( return component_particles )
 	if type == "rotator" then ( return component_rotator )
+	if type == "moving" then ( return component_moving )
 	if type == "neon" then ( return component_neon )
 )
 

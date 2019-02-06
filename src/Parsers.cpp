@@ -671,7 +671,7 @@ int Parsers::parseEntity(rapidjson::Value & entity, GraphicsSystem & graphics_sy
         tag.Load(entity, ent_id);
     }
 
-	if (entity.HasMember("movingplatform")) {
+	if (entity.HasMember("moving")) {
 
 		MovingPlatform& movable = ECS.createComponentForEntity<MovingPlatform>(ent_id);
 		movable.Load(entity, ent_id);

@@ -262,6 +262,26 @@ struct MVDExporter (
 		)
 	),
 	
+	-- Custom component, tag
+	fn exportMoving jwrite obj = (
+		
+		c_values = retrieveComponent obj component_moving
+
+		if  c_values != undefined then (
+			
+			local dir = [1,0,0]
+			if c_values.cmp_moving.r_dir.selection == 1 then ( dir = [1,0,0] )
+			if c_values.cmp_moving.r_dir.selection == 2 then ( dir = [0,1,0] )
+			if c_values.cmp_moving.r_dir.selection == 3 then ( dir = [0,0,1] )
+			
+			comp_spline = MVDJson()
+			comp_spline.add "speed" (c_values.r_speed as float)
+			comp_spline.add "time" (c_values.r_time as float)
+			comp_spline.add "dir" dir
+			jwrite.add "moving" comp_spline
+		)
+	),
+	
 	/*
 		Add any other necessary custom components here...
 	*/
@@ -296,6 +316,7 @@ struct MVDExporter (
 		-- Export custom components
 		-- Add other custom components you need here!
 		exportRotator entity obj
+		exportMoving entity obj
 		
 		-- ExportTag component to be the last component to be exported.
 		exportTag entity obj
@@ -320,6 +341,7 @@ struct MVDExporter (
 		-- Export custom components
 		-- Add other custom components you need here!
 		exportRotator entity obj
+		exportMoving entity obj
 		
 		-- ExportTag component to be the last component to be exported.
 		exportTag entity obj

@@ -15,6 +15,7 @@ void MovingPlatform::Save(rapidjson::Document & json, rapidjson::Value & entity)
 		ndir.PushBack(dir.z, allocator);
 		obj.AddMember("dir", ndir, allocator);
 		obj.AddMember("speed", speed, allocator);
+		obj.AddMember("time", time, allocator);
 	}
 
 	entity.AddMember("movingplatform", obj, allocator);
@@ -24,12 +25,12 @@ void MovingPlatform::Save(rapidjson::Document & json, rapidjson::Value & entity)
 void MovingPlatform::Load(rapidjson::Value & entity, int ent_id) {
 
 	{
-		auto json_speed = entity["movingplatform"]["speed"].GetFloat();
-		auto json_dir = entity["movingplatform"]["dir"].GetArray();
-
+		auto json_speed = entity["moving"]["speed"].GetFloat();
+		auto json_time = entity["moving"]["time"].GetFloat();
+		auto json_dir = entity["moving"]["dir"].GetArray();
+		time = json_time;
 		speed = json_speed;
 		dir = lm::vec3(json_dir[0].GetFloat(), json_dir[1].GetFloat(), json_dir[2].GetFloat());
-
 	}
 
 }
@@ -39,7 +40,15 @@ void MovingPlatform::update(float dt) {
 	if (ECS.entities.size() != 0) {
 		Entity ent = ECS.entities[owner];
 		Transform& platform = ECS.getComponentFromEntity<Transform>(owner);
+
+		counter += dt;
+		if (counter > time) {
+			counter = 0.0f;
+			speed *= -1;
+		}
+
 		platform.translate(dir.normalize() * speed * dt);
+		
 	}
 
 }
@@ -49,7 +58,10 @@ void MovingPlatform::debugRender() {
     ImGui::AddSpace(0, 5);
     if (ImGui::TreeNode("MovingPlatform")) {
         ImGui::AddSpace(0, 5);
-
+		
+		ImGui::DragFloat3("Direction", &dir.r);
+		ImGui::DragFloat("Speed", &speed);
+		ImGui::DragFloat("Duration", &time);
 
         ImGui::TreePop();
     }

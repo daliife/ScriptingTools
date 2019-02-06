@@ -4,9 +4,9 @@
 Final project for the subject *Tool Scripting* of the La Salle [MVD](https://www.salleurl.edu/es/estudios/master-en-desarrollo-avanzado-de-videojuegos). The project includes the customization of the debug system and gui interface, the proper exportation from 3Ds Max file to json and other improvements.
 
 ## Exercises
-1. **Map:** (WIP)
+1. **Map:** You can find the 3ds project (with the materials folder as well) in the *level_design* folder.
 
-2. **Scene export:** (WIP)
+2. **Scene export:** Due to unknown reasons, the colliders do not seem to be working properly when exporting the scene (probably because the objects are not primitives). If needed, the user can navigate the scene with the freecam mode (aka pressing 'O')
 
 3. **MovingPlatform component:** This new component will add a repetitive translation between two points on any object of the scene. Speed, direction and distance will be editable parameters for this specific component.
 Instructions for the MovingPlatform addition:
@@ -30,7 +30,7 @@ Instructions for the MovingPlatform addition:
   - **changecamera** - changes the current main camera and type of movement (free or fps).
 
 
-6. **Loading json for scene:** (WIP)
+6. **Loading json for scene:** Did not have time nor skills to finish this point.
 
 7. **Adding delete button:** Because the delete functionalityimplies to erase the index reference in the Entities vector (and thus, breaking the link/index reference with all components), we decided to implement a workaround. In our case, we've added a boolean in the *Component* struct to detect when an object is active. With that we can easily modify the GraphicsSystem to render or not the specific mesh.
 

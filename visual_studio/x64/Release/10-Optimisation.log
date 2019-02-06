@@ -1,8 +1,12 @@
 ﻿  Game.cpp
-c:\users\game\documents\projects\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Parsers.cpp
+c:\users\david\documents\projects\repositories\scriptingtools\src\parsers.cpp(156): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+  comp_movingplatform.cpp
   Generating code
-  1 of 5182 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  4 of 5182 functions (<0.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+    4 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  10-Optimisation.vcxproj -> C:\Users\GAME\Documents\PROJECTS\ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe
+  10-Optimisation.vcxproj -> C:\Users\David\Documents\PROJECTS\REPOSITORIES\ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe

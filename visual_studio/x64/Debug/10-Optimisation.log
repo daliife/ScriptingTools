@@ -1,59 +1,47 @@
 ﻿  CollisionSystem.cpp
   Components.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\game.h(71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\components.cpp(153): warning C4312: 'type cast': conversion from 'int' to 'ImTextureID' of greater size
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\components.cpp(174): warning C4312: 'type cast': conversion from 'int' to 'ImTextureID' of greater size
+  ControlSystem.cpp
+  DebugSystem.cpp
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GUISystem.cpp
+  Game.cpp
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  GraphicsSystem.cpp
+  Parsers.cpp
+c:\users\david\documents\projects\repositories\scriptingtools\src\parsers.cpp(156): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+  ScriptSystem.cpp
+  comp_movingplatform.cpp
   comp_rotator.cpp
   comp_tag.cpp
-  DebugSystem.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\game.h(71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Game.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\game.h(71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  GraphicsSystem.cpp
-  ControlSystem.cpp
-  GUISystem.cpp
-  imgui.cpp
-  imgui_draw.cpp
-  imgui_impl_glfw.cpp
-  imgui_impl_opengl3.cpp
-  imgui_widgets.cpp
-  linmath.cpp
   main.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\game.h(71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Parsers.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\parsers.cpp(155): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
-  RenderToTexture.cpp
-  ScriptSystem.cpp
-  Shader.cpp
-  Generating Code...
-  Compiling...
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   ConsoleModule.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(263): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(264): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(265): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(275): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(276): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(277): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(287): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(288): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\consolemodule.cpp(291): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  EditorGraphModule.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorgraphmodule.h(21): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(276): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(277): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(278): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(289): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(290): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(291): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(298): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(313): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(314): warning C4244: 'initializing': conversion from 'unsigned __int64' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\consolemodule.cpp(316): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   EditorSystem.cpp
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\game.h(71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorgraphmodule.h(21): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\david\documents\projects\repositories\scriptingtools\src\game.h(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorgraphmodule.h(21): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
 c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
-  c:\users\david\documents\projects\repositories\mvd-scriptingtools\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorutils.h(10): warning C4099: 'NodeFile': type name first seen using 'class' now seen using 'struct'
-  c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorsystem.h(15): note: see declaration of 'NodeFile'
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorutils.h(13): warning C4099: 'NodeFile': type name first seen using 'class' now seen using 'struct'
-  c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorutils.h(13): note: see declaration of 'NodeFile'
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorsystem.cpp(85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorsystem.cpp(187): warning C4312: 'type cast': conversion from 'GLuint' to 'void *' of greater size
-  EditorUtils.cpp
+  c:\users\david\documents\projects\repositories\scriptingtools\include\glfw\glfw3.h(98): note: see previous definition of 'APIENTRY'
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorutils.h(10): warning C4099: 'NodeFile': type name first seen using 'class' now seen using 'struct'
+  c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorsystem.h(15): note: see declaration of 'NodeFile'
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorutils.h(13): warning C4099: 'NodeFile': type name first seen using 'class' now seen using 'struct'
+  c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorutils.h(13): note: see declaration of 'NodeFile'
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorsystem.cpp(85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\david\documents\projects\repositories\scriptingtools\src\tools\editorsystem.cpp(187): warning C4312: 'type cast': conversion from 'GLuint' to 'void *' of greater size
   Generating Code...
-c:\users\david\documents\projects\repositories\mvd-scriptingtools\src\tools\editorutils.cpp(110): warning C4715: 'ProcessEntity': not all control paths return a value
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  10-Optimisation.vcxproj -> C:\Users\David\Documents\PROJECTS\REPOSITORIES\MVD-ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe
+  10-Optimisation.vcxproj -> C:\Users\David\Documents\PROJECTS\REPOSITORIES\ScriptingTools\visual_studio\..\MVD_Engine_Tools.exe
